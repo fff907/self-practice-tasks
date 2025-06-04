@@ -1,1 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Day1 - JS Click Event</title>
+    </head>
+    <body>
+        <button id="changeTextBtn">押してみて</button>
+        <p id="targetText">ここが変わるよ！</p>
+        <script>
+            const btn = document.getElementById("changeTextBtn");
+            const text = document.getElementById("targetText");
 
+            btn.addEventListener("click", () => {
+                text.textContent = "変更されました！";
+            });
+        </script>
+    </body>
+</html>
