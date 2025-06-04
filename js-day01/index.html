@@ -11,12 +11,12 @@
         <script>
             const textBtn = document.getElementById("changeTextBtn");
             const text = document.getElementById("targetText");
+            const colorBtn = document.getElementById('changeColorBtn');
 
+            // テキスト変更ボタンのイベント
             textBtn.addEventListener("click", () => {
                 text.textContent = "変更されました！";
             });
-
-            const colorBtn = document.getElementById('changeColorBtn');
 
             // ボタンが押されたときに関数を実行
             colorBtn.addEventListener("click", () => {
