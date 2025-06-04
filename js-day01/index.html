@@ -7,6 +7,7 @@
     <body>
         <button id="changeTextBtn">押してみて</button>
         <p id="targetText">ここが変わるよ！</p>
+        <button id="changeColorBtn">ここの色が変わるよ</button>
         <script>
             const btn = document.getElementById("changeTextBtn");
             const text = document.getElementById("targetText");
@@ -14,6 +15,10 @@
             btn.addEventListener("click", () => {
                 text.textContent = "変更されました！";
             });
+
+            function buttonClick(newColor) {
+            document.getElementById('changeColorBtn').style.background = newColor;
+            }
         </script>
     </body>
 </html>
