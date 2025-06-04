@@ -9,14 +9,14 @@
         <p id="targetText">ここが変わるよ！</p>
         <button id="changeColorBtn">ここの色が変わるよ</button>
         <script>
-            const btn = document.getElementById("changeTextBtn");
+            const textBtn = document.getElementById("changeTextBtn");
             const text = document.getElementById("targetText");
 
             btn.addEventListener("click", () => {
                 text.textContent = "変更されました！";
             });
 
-            const btn = document.getElementById('changeColorBtn');
+            const colorBtn = document.getElementById('changeColorBtn');
 
             // ボタンが押されたときに関数を実行
             btn.addEventListener("click", () => {
