@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Day2 - Mouseover Event</title>
+        <style>
+            #hoverTarget {
+                width: 200px;
+                height: 200px;
+                background-color: #ccc;
+                text-align: center;
+                line-height: 200px;
+                transition: all 0.3s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="hoverTarget">マウスを乗せて！</div>
+
+        <script>
+            const target = document.getElementById("hoverTarget");
+
+            target.addEventListener("mouseover", () => {
+                target.style.backgroundColor = "#f6b532";
+                target.textContent = "変わったよ！";
+            });
+
+                target.addEventListener("mouseout", () => {
+                target.style.backgroundColor = "#ccc";
+                target.textContent = "マウスを乗せて！";
+            });
+        </script>
+    </body>
+</html>
 
