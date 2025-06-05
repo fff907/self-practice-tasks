@@ -60,7 +60,7 @@ target.addEventListener("mouseover", () => {
 target.addEventListener("mouseout", () => {
     target.style.backgroundColor = "#ccc";
     target.style.transform = "scale(1)";
-    target.style.boxShadow = "";
+    target.style.boxShadow = "none";
     target.textContent = "マウスを乗せて！";
 });
 ```
