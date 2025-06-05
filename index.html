@@ -22,14 +22,17 @@
 
             target.addEventListener("mouseover", () => {
                 target.style.backgroundColor = "#f6b532";
+                target.style.transform = "scale(1.1)";
+                target.style.boxShadow = "0 0 10px #333";
                 target.textContent = "変わったよ！";
             });
 
-                target.addEventListener("mouseout", () => {
-                target.style.backgroundColor = "#ccc";
-                target.textContent = "マウスを乗せて！";
+            target.addEventListener("mouseout", () => {
+            target.style.backgroundColor = "#ccc";
+            target.style.transform = "scale(1)";
+            target.style.boxShadow = "";
+            target.textContent = "マウスを乗せて！";
             });
         </script>
     </body>
 </html>
-
