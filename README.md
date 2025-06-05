@@ -36,3 +36,40 @@ colorBtn.addEventListener("click", () => {
 - 見た目の変更（CSS）やHTMLとの連携も意識していきたい
 
 ---
+
+# Day2 - JavaScript Mouseover Event（マウスオーバーイベント）
+
+## ✨ 学習内容
+- `mouseover` / `mouseout` イベントの発火タイミングを体験
+- `style` プロパティを使った要素の動的なスタイル変更
+- `transition` をCSSで定義することで、スムーズな演出が可能になる
+
+## 💻 コード概要
+
+- `mouseover` で背景色・影・拡大・テキスト変更など複数処理を実行  
+- `mouseout` で元の状態に戻す処理を追加  
+
+```js
+target.addEventListener("mouseover", () => {
+    target.style.backgroundColor = "#f6b532";
+    target.style.transform = "scale(1.1)";
+    target.style.boxShadow = "0 0 10px #333";
+    target.textContent = "変わったよ！";
+});
+
+target.addEventListener("mouseout", () => {
+    target.style.backgroundColor = "#ccc";
+    target.style.transform = "scale(1)";
+    target.style.boxShadow = "";
+    target.textContent = "マウスを乗せて！";
+});
+```
+
+## 🔍 気づき・学び
+- `mouseover` / `mouseout` は **同じ要素に対して2種類の状態変化**を作れるのが便利  
+- 複数のスタイル変更も、1つのアロー関数の中に **順番にまとめて記述**すればOK  
+- CSSで `transition` を使っておけば、JSではただプロパティを変えるだけで **自然なアニメーション**になる  
+- 今回は関数を使わず書けたことで「関数なしでもできるパターン」が体感できた  
+- **要素を1つ定義すれば、それに対して複数のイベントを設定できる**というのが実感として理解できてきた
+
+---
