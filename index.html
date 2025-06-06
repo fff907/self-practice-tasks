@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>if文の分岐</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>天気と気温のメッセージ</title>
 </head>
 <body>
-    <h1>天気に応じたメッセージ</h1>
-    <select id="temperature">
-        <option value="">選んでください</option>
-        <option value="cold">寒い</option>
-        <option value="good">ちょうどいい</option>
-        <option value="hot">暑い</option>
-    </select>
-    <button id="checkBtn">メッセージを表示</button>
+  <h1>今日の天気と気温を選んでください</h1>
 
-    <p id="message"></p>
+  <label for="weather">天気：</label>
+  <select id="weather">
+    <option value="">--選んでください--</option>
+    <option value="sunny">晴れ</option>
+    <option value="rainy">雨</option>
+    <option value="cloudy">くもり</option>
+  </select>
 
-    <script src="main.js"></script>
+  <label for="temperature">気温：</label>
+  <select id="temperature">
+    <option value="">--選んでください--</option>
+    <option value="hot">暑い</option>
+    <option value="good">ちょうどよい</option>
+    <option value="cold">寒い</option>
+  </select>
+
+  <button id="checkBtn">メッセージを表示</button>
+
+  <p id="message"></p>
+
+  <script src="main.js"></script>
 </body>
 </html>
