@@ -1,5 +1,5 @@
 document.getElementById('checkBtn').addEventListener('click', function () {
-    const weather = document.getElementById('temperature').value;
+    const temp = document.getElementById('temperature').value;
     const message = document.getElementById('message');
 
     if (temp === 'cold') {
@@ -12,4 +12,3 @@ document.getElementById('checkBtn').addEventListener('click', function () {
         message.textContent = '気温が選択されていません。';
     }
 });
-
