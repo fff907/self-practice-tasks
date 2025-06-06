@@ -1,14 +1,14 @@
 document.getElementById('checkBtn').addEventListener('click', function () {
-    const weather = document.getElementById('weather').value;
+    const weather = document.getElementById('temperature').value;
     const message = document.getElementById('message');
 
-    if (weather === 'sunny') {
-        message.textContent = '今日はいい天気ですね！';
-    } else if (weather === 'rainy') {
-        message.textContent = '傘を忘れずに持っていきましょう。';
-    } else if  (weather === 'cloudy') {
-        message.textContent = 'くもり空でも元気にいきましょう。';
+    if (temp === 'cold') {
+    message.textContent = '今日はコートが必要かもしれませんね。';
+    } else if (temp === 'good') {
+        message.textContent = 'ちょうど良い気温ですね。';
+    } else if (temp === 'hot') {
+        message.textContent = '熱中症に気をつけましょう。';
     } else {
-        message.textContent = '天気が選択されていません。';
+        message.textContent = '気温が選択されていません。';
     }
 });
