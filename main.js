@@ -1,6 +1,10 @@
 const items = document.querySelectorAll("#colorList li");
 const colors = ["red","blue","green","yellow"];
 
-colors.forEach((fruit) => {
-  console.log(fruit);
+items.forEach((item, index) => {
+    item.style.backgroundColor = colors[index];
+
+    item.addEventListener("click", () => {
+        alert(`${item.textContent}をクリックしました！`);
+    });
 });
