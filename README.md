@@ -120,3 +120,46 @@ document.getElementById('checkBtn').addEventListener('click', function () {
 - `select`＋`option` で選択肢を作れば、**条件分岐の練習がしやすく応用もしやすい**
 
 ---
+
+# Day4 - JavaScript 配列とループ（forEach）
+
+## ✨ 学習内容
+
+- `forEach()` を使った配列のループ処理
+- `querySelectorAll()` で複数の `li` 要素を取得
+- 配列の値と `li` のインデックスを組み合わせてスタイルを適用
+- `addEventListener()` を使ったクリックイベント処理
+
+## 💻 コード概要
+
+- HTMLに並んだ `<li>` 要素それぞれに、配列の色を使って背景色をつける
+- クリックされた `li` に応じてアラートで色名を表示
+
+```js
+const items = document.querySelectorAll("#colorList li");
+const colors = ["red","blue","green","yellow"];
+
+items.forEach((item, index) => {
+    item.style.backgroundColor = colors[index];
+
+    item.addEventListener("click", () => {
+        alert(`${item.textContent}をクリックしました！`);
+    });
+});
+```
+
+## 🔍 気づき・学び
+
+- `forEach` はインデックス番号を使って **HTMLの複数要素と配列を対応させやすい**
+- `.textContent` を使えば、要素内のテキストを取得して**アラートなどに活用できる**
+- `style.backgroundColor` は**スタイルを直接JSで変更する便利な方法**
+- `addEventListener()` の中で関数を書くと、**クリックごとの処理を柔軟に記述できる**
+- 最初は `li` に色がついているだけだが、**動きが加わると一気に「アプリ」っぽくなる**感覚が得られた
+
+## 📌 アレンジ案（実装済 or 実装検討）
+
+- `hover`時に影をつけて、`click`された要素だけ `class="active"` になるよう改善
+- カラー名の `textContent` に対応して、クリックで別の情報を表示する仕様なども可能
+
+---
+
