@@ -14,3 +14,13 @@ function changeText() {
 }
 
 document.getElementById('changeBtn').addEventListener('click', changeText);
+
+const btn = document.getElementById('changeBtn');
+
+btn.addEventListener('mouseover', () => {
+    btn.classList.add('hovered');
+});
+
+btn.addEventListener('mouseleave', () => {
+    btn.classList.remove('hovered');
+});
