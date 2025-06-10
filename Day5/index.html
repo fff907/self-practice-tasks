@@ -3,6 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <title>ボタンを押すとテキストが変わる</title>
+    <style>
+      #changeBtn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        transition: all 0.3s ease;
+      }
+
+      /* CSSだけでのhover変化 */
+      #changeBtn:hover {
+        background-color: #cceeff;
+        cursor: pointer;
+      }
+
+      /* JSで動的に追加されるクラス */
+      .hovered {
+        box-shadow: 0 0 10px #00aaff;
+      }
+    </style>
   </head>
   <body>
     <button id="changeBtn">テキスト変更</button>
