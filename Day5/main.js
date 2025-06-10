@@ -8,8 +8,8 @@ function changeText() {
         output.textContent = '最初のクリックですね！';
     } else if (clickCount === 2) {
         output.textContent = '2回目のクリックです！';
-    } else {
-        output.textContent = 'もう${clickCount}回目ですよ～！';
+    } else if (clickCount >= 5) {
+        output.textContent = '押しすぎです';
     }
 }
 
