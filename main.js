@@ -9,7 +9,7 @@ function changeText() {
     } else if (clickCount === 2) {
         output.textContent = '2回目のクリックです！';
     } else {
-        output.textContent = 'もう${clickCount}回目ですよ～！';
+        output.textContent = `もう${clickCount}回目ですよ～！`;
     }
 }
 
