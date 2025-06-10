@@ -184,7 +184,7 @@ items.forEach((item, index) => {
 ## 🧩 アレンジ内容
 
 - `if / else if / else` による**クリック回数の条件分岐**
-- `5回目以降は「押しすぎです」**という固定メッセージに切り替え**
+- 5回目以降は「押しすぎです」**という固定メッセージに切り替え**
 - `mouseenter / mouseleave` イベントを用いて、**JS経由でスタイル変更**
 - `classList.add('hovered')` → CSS側の `.hovered` による光るエフェクト発動
 
