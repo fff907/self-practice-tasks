@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const textWidth = loadingText.offsetWidth + "px";
 
-    const tl = WebGLSampler.timeline();
+    const tl = gsap.timeline();
 
     tl.to(loadingBar, {
         width: textWidth,
