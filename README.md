@@ -196,3 +196,59 @@ items.forEach((item, index) => {
 - クラス名（`hovered`, `is-open` など）は**「状態を表す単語」で自由につけて良い**
 
 ---
+
+# Day6 - JavaScript × GSAPアニメーション（ローディング演出）
+
+## ✨ 学習内容
+
+- `DOMContentLoaded` による **DOM読み込み完了時の処理実行**
+- `document.querySelector()` で要素を取得
+- `gsap.timeline()` による **アニメーションの連続制御**
+- `.to()` メソッドを使って **特定プロパティを動的に変更**
+- `onComplete` による **アニメーション終了後のコールバック処理**
+- `opacity`, `width` を使った **基本的なフェードイン・バー演出**
+- `transition` を使った **CSSアニメーションとの組み合わせ**
+
+## 💻 コード概要
+
+- GSAPライブラリ（CDN）を読み込み、`main.js`でアニメーション制御
+- ローディングバーが「テキスト幅」に合わせてスライド
+- ローディング画面をフェードアウトし、背景画像をふわっと表示
+- 背景画像の表示には `.background` 要素と `opacity` の制御を使用
+
+## 📦 GSAP導入手順（CDN使用）
+
+1. 以下のCDNリンクを、**`<script>`タグで`main.js`より前に読み込む**
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="main.js"></script>
+```
+
+2. JavaScriptファイル内で `gsap.timeline()` を使ってアニメーションを記述
+```js
+const tl = gsap.timeline();
+
+tl.to(loadingBar, {
+  width: "200px",
+  duration: 1
+})
+.to(background, {
+  opacity: 1,
+  duration: 1
+});
+```
+
+## 🧩 アレンジ内容
+- テキスト要素の横幅（`offsetWidth`）を取得して、バー幅を動的に設定  
+- ローディング終了後に `display: none` を付与して非表示化  
+- 背景画像をJS側から `opacity: 1` にしてフェード表示  
+- アニメーションは **GSAP timeline** にまとめて記述し、順序制御を簡潔に
+
+## 🔍 気づき・学び
+- `gsap.timeline()` は複数の `.to()` を順に実行できて、**コードが整理しやすい**  
+- `opacity` の変更と `display: none` を組み合わせると、**自然な非表示切替ができる**
+- `offsetWidth` を使って「**実際の幅に合わせたアニメーション**」が可能になる
+- CDN方式なら**インストール不要**で試せるので、学習用にも最適
+
+---
